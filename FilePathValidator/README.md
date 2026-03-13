@@ -8,17 +8,25 @@
 
 1. `ValidatePath(string path)` - 경로 검증
    - null 또는 빈 문자열이면 `ArgumentNullException` 발생
-   - 금지 문자(`<`, `>`, `|`, `"`, `*`, `?`) 포함 시 "경로에 금지 문자 '{문자}'가 포함되어 있습니다." `ArgumentException` 발생
-   - 경로 길이가 260자를 초과하면 "경로 길이가 260자를 초과합니다." `ArgumentOutOfRangeException` 발생
+	- 
+   - 금지 문자(`<`, `>`, `|`, `"`, `*`, `?`) 포함 시 "경로에 금지 문자 
+	- '{문자}'가 포함되어 있습니다." `ArgumentException` 발생
+	- 
+   - 경로 길이가 260자를 초과하면 "경로 길이가 260자를 초과합니다."
+	- `ArgumentOutOfRangeException` 발생
    - 유효하면 "경로가 유효합니다: {path}" 출력
 
 2. `ValidateExtension(string path, string[] allowedExtensions)` - 확장자 검증
-   - 허용되지 않은 확장자이면 "허용되지 않은 확장자입니다: {extension}" `ArgumentException` 발생
+   - 허용되지 않은 확장자이면 "허용되지 않은 확장자입니다: {extension}"
+	- `ArgumentException` 발생
+	- 
    - 유효하면 "확장자가 유효합니다: {extension}" 출력
 
 ## 요구사항
 
-- `ArgumentNullException`, `ArgumentException`, `ArgumentOutOfRangeException`을 상황에 맞게 사용
+- `ArgumentNullException`, `ArgumentException`, `ArgumentOutOfRangeException`을 
+- 상황에 맞게 사용
+- 
 - Main에서 여러 테스트 케이스를 try-catch로 감싸서 각 예외별 다른 메시지 출력
 - nameof 연산자 사용 권장
 
